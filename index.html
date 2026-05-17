@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayford | CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      color-scheme: dark light;
+      color: #0f172a;
+      background: #eef3fb;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: linear-gradient(180deg, #f8fbff 0%, #eef3fb 100%);
+    }
+
+    .page-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .profile-card,
+    .section-card {
+      border: 1px solid rgba(15, 23, 42, .08);
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, .08);
+    }
+
+    .profile-card {
+      padding: 28px;
+    }
+
+    .avatar {
+      width: clamp(110px, 16vw, 170px);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #3b82f6;
+      box-shadow: 0 16px 30px rgba(59, 130, 246, .15);
+      background: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .heading-hero {
+      letter-spacing: -.04em;
+      font-weight: 700;
+    }
+
+    .text-accent {
+      color: #2563eb;
+    }
+
+    .section-title {
+      font-size: .95rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .skill-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: .55rem .9rem;
+      margin: .25rem .25rem 0 0;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: .9rem;
+      border: 1px solid #dbeafe;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0.6rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #dbeafe;
+    }
+
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      left: 0.35rem;
+      top: 0.5rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background: #2563eb;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, .12);
+    }
+
+    .detail-list {
+      padding-left: 1.25rem;
+      margin-top: .75rem;
+      list-style-position: outside;
+    }
+
+    .detail-list li {
+      margin-bottom: .55rem;
+    }
+
+    .contact-list li {
+      margin-bottom: .65rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: #334155;
+    }
+
+    .contact-list li i {
+      width: 1.5rem;
+      text-align: center;
+      color: #2563eb;
+    }
+
+    .section-card {
+      padding: 28px;
+    }
+
+    .section-card h3 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .section-card p,
+    .section-card li {
+      color: #475569;
+      line-height: 1.75;
+    }
+
+    .download-btn {
+      background: linear-gradient(135deg, #2563eb 0%, #6366f1 100%);
+      border: 0;
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.95rem 1.8rem;
+      box-shadow: 0 18px 30px rgba(37, 99, 235, .18);
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #4f46e5 100%);
+    }
+
+    @media (max-width: 991px) {
+      .page-wrap {
+        padding: 24px 16px 60px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .profile-card,
+      .section-card {
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="mb-5">
+      <div class="d-flex flex-column flex-md-row align-items-start justify-content-between gap-4">
+        <div class="d-flex gap-4 align-items-center">
+          <div class="avatar">
+            <img src="image.jpg" alt="Profile photo">
+          </div>
+          <div>
+            <p class="text-uppercase text-secondary mb-2 fw-bold small">Curriculum Vitae</p>
+            <h1 class="heading-hero display-6 mb-1">Hayford Asante Adde</h1>
+            <p class="lead mb-1">Web Developer & UI/UX Enthusiast</p>
+            <p class="text-muted mb-0">Building polished, responsive web experiences with a focus on clean design and strong performance.</p>
+          </div>
+        </div>
+        <div class="text-md-end">
+          <a class="download-btn d-inline-flex align-items-center gap-2" href="tel:+233534396434">
+            <i class="fa-solid fa-phone"></i> 0534-396-434</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="row g-4">
+      <aside class="col-lg-4">
+        <div class="profile-card mb-4">
+          <h2 class="section-title">About</h2>
+          <p>I am a detailed web developer with strong foundation in java script,Python,Html and CSS
+Proven ability to deliver polished, responsive websites that meet client goals and user needs. Passionate about clean design, performance optimization, and continuous learning in the ever-evolving web development landscape.
+I am passionate about writing clean,efficient code and i am eader to leverage my technical training to contribute
+to innovative software solutions in a fast paced team environment          </p>
+
+           <h2 class="section-title mt-4">Contact</h2>
+          <ul class="list-unstyled contact-list mb-0">
+            <li><i class="fa-solid fa-envelope"></i><span>hayford718@gmail.com</span></li>
+            <li><i class="fa-solid fa-phone"></i><span>+233 534396434</span></li>
+            <li><i class="fa-solid fa-location-dot"></i><span>Kasoa, Ghana</span></li>
+            <li><i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/hayford</span></li>
+          </ul>
+        </div>
+
+        <div class="profile-card mb-4">
+          <h2 class="section-title">Core Skills</h2>
+          <div class="d-flex flex-wrap">
+            <span class="skill-chip">HTML5</span>
+            <span class="skill-chip">CSS</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <h2 class="section-title">Tools & Technologies</h2>
+          <div class="d-flex flex-wrap">
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">GitHub</span>
+          
+          </div>
+        </div>
+      </aside>
+
+      <main class="col-lg-8">
+        <div class="section-card mb-4">
+          <h3>Professional Experience</h3>
+          <div class="timeline-item">
+            <h4 class="h6 mb-1">Web Development Intern</h4>
+            <p class="text-secondary mb-2">2026 — Present</p>
+            <ul class="detail-list">
+              <li>Supported front-end development for small websites by writing clean HTML, CSS, and JavaScript.</li>
+              <li>Created responsive page layouts and improved mobile usability with modern styling techniques.</li>
+              <li>Worked with mentors to test and debug UI issues while learning best practices for accessibility and performance.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h4 class="h6 mb-1">Personal Web Projects</h4>
+            <p class="text-secondary mb-2">2026 — Present</p>
+            <ul class="detail-list">
+              <li>Built a personal portfolio website to showcase skills, projects, and contact information.</li>
+              <li>Developed small practice apps using Bootstrap and vanilla JavaScript to reinforce responsive design.</li>
+              <li>Used Git for version control and collaborated with online communities to improve code quality.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-card mb-4">
+          <h3>Selected Projects</h3>
+          <article class="mb-4">
+            <h5 class="mb-1">Portfolio Website</h5>
+            <p class="text-secondary mb-2">A modern personal portfolio to showcase projects, skills, and contact details.</p>
+            <ul class="detail-list">
+              <li>Created a clean, mobile-first design with smooth animations and strong visual hierarchy.</li>
+              <li>Used Bootstrap and custom CSS for responsive layout and consistent branding.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h5 class="mb-1">E-commerce Landing Page</h5>
+            <p class="text-secondary mb-2">A polished landing page for a retail product launch.</p>
+            <ul class="detail-list">
+              <li>Built with semantic markup, flexible cards, and a conversion-focused CTA section.</li>
+              <li>Included interactive product sections and performance-friendly assets.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section-card mb-4">
+          <h3>Education</h3>
+          <div class="timeline-item">
+            <h4 class="h6 mb-1">Web Development Certification</h4>
+            <p class="text-secondary mb-2">Code Wave I.T Training Center · 2026</p>
+            <p>Completed coursework in responsive design, JavaScript fundamentals, and modern web development workflows.</p>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3>Languages & Interests</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="detail-list mb-0">
+                <li><strong>English</strong> — Fluent</li>
+                <li><strong>Twi</strong> — Native</li>
+              </ul>
+            </div>
+           
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
